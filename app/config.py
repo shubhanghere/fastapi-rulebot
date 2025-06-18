@@ -6,6 +6,7 @@ RULES = {
     
         "linkedin": "https://www.linkedin.com/in/shubhang-dhawan-815269251/"
     },
+    
     "infutrix": {
         "description": "Infutrix is a cutting-edge digital agency specializing in AI, MVP software, and scalable startup solutions.",
         

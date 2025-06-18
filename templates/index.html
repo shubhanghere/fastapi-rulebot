@@ -1,21 +1,88 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Rule-Based Chatbot</title>
-    <link rel="stylesheet" href="/static/styles.css">
-    <link rel="stylesheet" href="/static/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <h1>Welcome to the Chatbot Interface</h1>
-    <button onclick="window.location.href='/about/shubhang'">Shubhang</button>
-    <button onclick="window.location.href='/about/infutrix'">Infutrix</button>
-    <hr>
-    {% if message %}
-        <p>{{ message }}</p>
-        {% if link %}
-            <a href="{{ link }}" target="_blank">Visit External Link</a>
-        {% endif %}
-    {% endif %}
-</body>
-</html>
+# 🚦 Behavior Track Assistant
+
+*A Real-Time Behavior-Aware Rule-Based Chatbot focused on monitoring and reacting to user behavior*
+
+
+---
+
+<div style="text-align:center">
+    <button style="margin: 10px; padding: 10px 20px; font-size: 18px; border-radius: 12px; background-color: #005bbb; color: white; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">Shubhang</button>
+    <button style="margin: 10px; padding: 10px 20px; font-size: 18px; border-radius: 12px; background-color: #005bbb; color: white; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">Infutrix</button>
+</div>
+
+---
+
+## 👨‍💻 About Shubhang Dhawan
+
+LLM Engineer | AI Researcher | Conversational AI Specialist
+
+📍 **Currently at:** Infutrix Technologies  
+🧠 **Experience:** 1+ years in the AI/ML industry  
+🎓 **Education:** MSc in Data Science (Chandigarh University), BSc in PCM  
+
+### 🔍 Core Expertise:
+- Large Language Models (LLMs)
+- Retrieval-Augmented Generation (RAG) Systems
+- GenAI Chatbots & Content Personalization
+- FastAPI Web Apps & Backend APIs
+- Vector Search (LlamaIndex, Pinecone)
+- Semantic Search & Prompt Engineering
+- Azure GPT, OpenAI APIs, Mistral
+- MongoDB Atlas, Google Cloud Platform (GCP)
+
+### 📚 Publications:
+- **IEEE:** Online Drug Recommendation using BFGT-DBi-LSTM + PRFFC
+- **IJSREM:** Ethical Implications of AI in Healthcare (Bias, Security, Privacy)
+
+### 💼 Work Experience Highlights:
+
+- **🔹 Infutrix Technologies** *(Current)*
+  - Developing a rule-based, behavior-aware chatbot using cookie tracking.
+  - Building RAG pipelines for content delivery and user engagement.
+
+- **🔹 Times Network** *(AI/ML Intern)*
+  - Built GPT-4o based news article generation tool aligned with editor persona.
+  - Translated and voice-overed videos using Hindi AI voice + transcription models.
+  - Created a WhatsApp chatbot for car specifications using RAG.
+
+- **🔹 NXG Ventures** *(ML Engineer Intern)*
+  - Developed article generator using Node.js + LLMs + MongoDB
+  - Integrated summarization, auto-tagging, and GenAI features
+
+- **🔹 Frontera Health** *(LLM Intern)*
+  - Developed a GenAI chatbot for health queries using Mistral 7B + GPT-3.5
+  - Deployed on GCP using LlamaIndex + MongoDB for vector storage
+  - Focused on improving relevance and recall in semantic chatbot responses
+
+### 🌐 Profiles:
+- [🔗 LinkedIn](https://www.linkedin.com/in/shubhangdhawan/)
+- [📄 Publications](#)
+- [💻 GitHub](https://github.com/shubhanghere)
+
+---
+
+### 📈 What This Chatbot Does:
+> Behavior Track Assistant monitors user interactions (clicks, hovers, visits) using cookies and intelligently triggers personalized chatbot messages.
+
+- Detects **new vs returning users**
+- Logs **which buttons/pages user clicked**
+- Tracks **engagement time on sections**
+- Fires custom fallback or **smart recommendation flows**
+- Allows proactive message logic for Active CA behavior
+- Supports mock testing of rules in `config.py` to simulate behavior
+- Provides a scalable structure for future Live User Activity Monitoring with DB integration
+
+---
+
+🌟 **This platform simulates intelligent user tracking like Netflix/Amazon, enabling a smarter, human-like chatbot flow.**
+
+➡️ Future-ready for deeper Active CA integrations such as:
+- Predictive prompts
+- Custom rule expansion via UI configs
+- Session-based personalization using vector search
+
+---
+
+<div style="text-align:center; margin-top:20px">
+    <a href="https://www.linkedin.com/in/shubhangdhawan/" target="_blank" style="font-size:16px; color:#005bbb; text-decoration: none; font-weight: bold;">🔗 Visit External Link</a>
+</div>
