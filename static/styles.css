@@ -27,6 +27,16 @@ h1 {
   margin-bottom: 10px;
 }
 
+
+/* Fix emoji inside h1 to retain its full native color */
+h1 .emoji {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: initial;
+  margin-right: 8px;
+}
+
 h3 {
   font-size: 1.3rem;
   font-weight: 500;
