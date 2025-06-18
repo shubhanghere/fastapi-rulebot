@@ -4,56 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Behavior Track Assistant</title>
-  <link rel="stylesheet" href="/static/styles.css" />
+  <link rel="stylesheet" href="static/styles.css" />
 </head>
 <body>
 
-  <h1>🚦 Behavior Track Assistant</h1>
+  <!-- Logo + Title -->
+  <h1>🧠 Behavior Track Assistant</h1>
   <h3>⚡ A Real-Time, Rule-Based Chatbot Focused on Monitoring & Reacting to User Behavior</h3>
 
+  <!-- Buttons -->
   <div>
     <button onclick="showInfo('shubhang')">👤 Shubhang</button>
     <button onclick="showInfo('infutrix')">🏢 Infutrix</button>
   </div>
 
-  <p id="responseBox">Click a button above to learn more 👆</p>
+  <!-- Response Box -->
+  <p id="responseBox">
+    Click a button above to see more information.
+  </p>
 
-  <a href="https://github.com/shubhanghere/fastapi-rulebot" target="_blank">🔗 Visit External Link</a>
+  <!-- Links -->
+  <a href="https://www.linkedin.com/in/shubhang-dhawan-815269251/" target="_blank">🔗 Visit LinkedIn Profile</a>
+  <br />
+  <a href="https://github.com/shubhanghere/fastapi-rulebot" target="_blank">💡 Visit GitHub Repo</a>
 
+  <!-- Script -->
   <script>
     const RULES = {
       shubhang: {
         description: `
-🔹 <strong>About:</strong> Shubhang Dhawan is an LLM Engineer at Infutrix Technologies with 1+ years in the AI/ML domain.  
-🔹 <strong>Specialization:</strong> Chatbots, RAG systems, FastAPI apps, LLM pipelines.  
-🔹 <strong>Experience:</strong> Times Network, NXG Ventures, Frontera Health.  
-🔹 <strong>Publications:</strong> IEEE & IJSREM - Drug Recommendation (BGFT-DBi-LSTM), AI Ethics in Healthcare.  
-🔹 <strong>Education:</strong> M.Sc. in Data Science (CU), B.Sc. in PCM (CSJMU).  
-🔹 <strong>Tech Stack:</strong> Python, LLMs, RAG, FastAPI, MongoDB, Pinecone, Azure, GCP.  
-🔹 <strong>Passion:</strong> Building intelligent systems with GenAI & automation.
+          🔷 <strong>About:</strong> Shubhang Dhawan is an LLM Engineer at Infutrix Technologies with 1+ years in AI/ML.<br><br>
+          🔷 <strong>Specialization:</strong> Chatbots, RAG systems, FastAPI apps, LLM pipelines.<br><br>
+          🔷 <strong>Experience:</strong> Times Network, NXG Ventures, Frontera Health.<br><br>
+          🔷 <strong>Publications:</strong> IEEE & IJSREM - Drug Recommendation (BGFT-DBi-LSTM), AI Ethics in Healthcare.<br><br>
+          🔷 <strong>Education:</strong> M.Sc. in Data Science (CU), B.Sc. in PCM (CSJMU).<br><br>
+          🔷 <strong>Tech Stack:</strong> Python, LLMs, RAG, FastAPI, MongoDB, Pinecone, Azure, GCP.<br><br>
+          🔷 <strong>Passion:</strong> Building intelligent systems with GenAI & automation.
         `,
         linkedin: "https://www.linkedin.com/in/shubhang-dhawan-815269251/"
       },
       infutrix: {
         description: `
-🏢 <strong>Infutrix Technologies:</strong>  
-A cutting-edge digital agency focused on:  
-✅ AI & MVP Development  
-✅ Scalable Startup Solutions  
-✅ Intelligent Web Platforms  
-✅ GenAI, Automation, Data-Driven Systems  
-🔗 <em>Delivering the future of smart product engineering!</em>
+          🔶 <strong>About:</strong> Infutrix is a cutting-edge digital agency focused on scalable startup and enterprise solutions.<br><br>
+          🔶 <strong>Expertise:</strong> AI, MVP Development, Cloud Solutions, Data Engineering.<br><br>
+          🔶 <strong>Culture:</strong> Innovation-led, collaborative, and mission-driven.<br><br>
+          🔶 <strong>Focus Areas:</strong> Product Development, Business Acceleration, Digital Transformation.
         `,
         website: "https://infutrix.com"
       }
     };
 
-    function showInfo(key) {
-      const res = RULES[key];
-      const link = key === "shubhang" 
-        ? `<br><br>🔗 <a href="${res.linkedin}" target="_blank">Visit LinkedIn Profile</a>`
-        : `<br><br>🌐 <a href="${res.website}" target="_blank">Visit Company Website</a>`;
-      document.getElementById("responseBox").innerHTML = res.description + link;
+    function showInfo(topic) {
+      const content = RULES[topic].description;
+      document.getElementById("responseBox").innerHTML = content;
     }
   </script>
 
