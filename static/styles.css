@@ -21,7 +21,6 @@ body {
 /* Header Title */
 h1 {
     font-size: 3.2rem;
-    color: #0a66c2;
     font-weight: 700;
     margin-bottom: 30px;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.08);
@@ -29,6 +28,8 @@ h1 {
     background: linear-gradient(to right, #0a66c2, #004080);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 /* Button Group Styling */
@@ -128,3 +129,8 @@ button[title]:hover::after {
 
 /* Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Add standard background-clip for compatibility */
+h1 {
+    background-clip: text;
+}
