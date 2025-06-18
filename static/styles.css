@@ -1,136 +1,78 @@
-/* Reset & Base Styling */
+/* Reset some basics */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
+/* Sexy Glassy Background */
 body {
-    background: linear-gradient(135deg, #f0f4f8, #ffffff);
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #1a1a1a;
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 20px;
-    background-attachment: fixed;
+    justify-content: start;
+    padding-top: 80px;
+    color: #1e1e1e;
 }
 
-/* Header Title */
+/* Header */
 h1 {
-    font-size: 3.2rem;
-    font-weight: 700;
+    font-size: 2.8rem;
     margin-bottom: 30px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.08);
-    letter-spacing: 1.2px;
-    background: linear-gradient(to right, #0a66c2, #004080);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+    color: #0a66c2;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
-/* Button Group Styling */
+/* Button Styles */
 button {
-    background: linear-gradient(145deg, #0a66c2, #084b9a);
+    background: rgba(10, 102, 194, 0.9);
     color: #fff;
-    padding: 15px 32px;
-    font-size: 1.15rem;
+    padding: 14px 28px;
+    font-size: 1.1rem;
     border: none;
-    border-radius: 16px;
     margin: 12px;
+    border-radius: 12px;
     font-weight: 600;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
     cursor: pointer;
-    backdrop-filter: blur(4px);
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    box-shadow: 0 8px 16px rgba(10, 102, 194, 0.3);
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(5px);
 }
 
 button:hover {
-    transform: translateY(-4px) scale(1.07);
-    background-color: #062f5e;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    background-color: #084b9a;
+    transform: translateY(-2px) scale(1.05);
 }
 
-/* Bio Section Box */
+/* Response text */
 p {
-    font-size: 1.2rem;
-    line-height: 1.9;
-    max-width: 850px;
-    padding: 30px 36px;
     margin-top: 30px;
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 20px;
-    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
-    backdrop-filter: blur(7px);
-    text-align: justify;
-    border-left: 5px solid #0a66c2;
-    transition: all 0.3s ease-in-out;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(6px);
 }
 
-p:hover {
-    box-shadow: 0 12px 38px rgba(0, 0, 0, 0.1);
-}
-
-/* External Links */
+/* External Link */
 a {
-    margin-top: 25px;
+    margin-top: 15px;
+    display: inline-block;
     font-weight: 600;
-    font-size: 1.05rem;
     color: #0a66c2;
     text-decoration: none;
-    transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
 a:hover {
-    color: #062f5e;
     text-decoration: underline;
-    transform: scale(1.03);
-}
-
-/* Tooltip-style titles */
-button[title]:hover::after {
-    content: attr(title);
-    position: absolute;
-    background: #1e1e1e;
-    color: white;
-    font-size: 0.8rem;
-    padding: 6px 10px;
-    border-radius: 6px;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    z-index: 1000;
-    opacity: 0.9;
-}
-
-/* Responsive Styling */
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    button {
-        width: 90%;
-        font-size: 1rem;
-        padding: 14px 24px;
-    }
-
-    p {
-        font-size: 1rem;
-        padding: 20px;
-    }
-}
-
-/* Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-/* Add standard background-clip for compatibility */
-h1 {
-    background-clip: text;
+    color: #084b9a;
 }
