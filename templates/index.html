@@ -1,21 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Rule-Based Chatbot</title>
-    <link rel="stylesheet" href="/static/styles.css">
-    <link rel="stylesheet" href="/static/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Behavior Track Assistant</title>
+  <link rel="stylesheet" href="/static/styles.css" />
 </head>
 <body>
-    <h1>Welcome to the Chatbot Interface</h1>
-    <button onclick="window.location.href='/about/shubhang'">Shubhang</button>
-    <button onclick="window.location.href='/about/infutrix'">Infutrix</button>
-    <hr>
-    {% if message %}
-        <p>{{ message }}</p>
-        {% if link %}
-            <a href="{{ link }}" target="_blank">Visit External Link</a>
-        {% endif %}
-    {% endif %}
+
+  <h1>🚦 Behavior Track Assistant</h1>
+  <h3>⚡ A Real-Time, Rule-Based Chatbot Focused on Monitoring & Reacting to User Behavior</h3>
+
+  <div>
+    <button onclick="showInfo('shubhang')">👤 Shubhang</button>
+    <button onclick="showInfo('infutrix')">🏢 Infutrix</button>
+  </div>
+
+  <p id="responseBox">Click a button above to learn more 👆</p>
+
+  <a href="https://github.com/shubhanghere/fastapi-rulebot" target="_blank">🔗 Visit External Link</a>
+
+  <script>
+    const RULES = {
+      shubhang: {
+        description: `
+🔹 <strong>About:</strong> Shubhang Dhawan is an LLM Engineer at Infutrix Technologies with 1+ years in the AI/ML domain.  
+🔹 <strong>Specialization:</strong> Chatbots, RAG systems, FastAPI apps, LLM pipelines.  
+🔹 <strong>Experience:</strong> Times Network, NXG Ventures, Frontera Health.  
+🔹 <strong>Publications:</strong> IEEE & IJSREM - Drug Recommendation (BGFT-DBi-LSTM), AI Ethics in Healthcare.  
+🔹 <strong>Education:</strong> M.Sc. in Data Science (CU), B.Sc. in PCM (CSJMU).  
+🔹 <strong>Tech Stack:</strong> Python, LLMs, RAG, FastAPI, MongoDB, Pinecone, Azure, GCP.  
+🔹 <strong>Passion:</strong> Building intelligent systems with GenAI & automation.
+        `,
+        linkedin: "https://www.linkedin.com/in/shubhang-dhawan-815269251/"
+      },
+      infutrix: {
+        description: `
+🏢 <strong>Infutrix Technologies:</strong>  
+A cutting-edge digital agency focused on:  
+✅ AI & MVP Development  
+✅ Scalable Startup Solutions  
+✅ Intelligent Web Platforms  
+✅ GenAI, Automation, Data-Driven Systems  
+🔗 <em>Delivering the future of smart product engineering!</em>
+        `,
+        website: "https://infutrix.com"
+      }
+    };
+
+    function showInfo(key) {
+      const res = RULES[key];
+      const link = key === "shubhang" 
+        ? `<br><br>🔗 <a href="${res.linkedin}" target="_blank">Visit LinkedIn Profile</a>`
+        : `<br><br>🌐 <a href="${res.website}" target="_blank">Visit Company Website</a>`;
+      document.getElementById("responseBox").innerHTML = res.description + link;
+    }
+  </script>
+
 </body>
 </html>
