@@ -27,7 +27,6 @@ h1 {
   margin-bottom: 10px;
 }
 
-
 /* Fix emoji inside h1 to retain its full native color */
 h1 .emoji {
   background: none;
@@ -96,21 +95,4 @@ a {
 a:hover {
   color: #00c6ff;
   text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.3rem;
-  }
-
-  h3 {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  p#responseBox {
-    font-size: 1rem;
-    padding: 20px;
-  }
 }
